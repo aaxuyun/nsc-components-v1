@@ -1,0 +1,8 @@
+{
+  "short_name": "nsc-components-v1",
+  "name": "nsc-components-v1",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
