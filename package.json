@@ -19,7 +19,8 @@
     "start": "rollup -c -w",
     "prepare": "yarn run build",
     "predeploy": "cd example && yarn install && yarn run build",
-    "deploy": "gh-pages -d example/build"
+    "deploy": "gh-pages -d example/build",
+    "storybook": "start-storybook -s ./dist"
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
@@ -33,9 +34,15 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.2.0",
     "@babel/preset-env": "^7.5.5",
     "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-actions": "^5.1.11",
+    "@storybook/addon-info": "^5.1.11",
+    "@storybook/addon-links": "^5.1.11",
+    "@storybook/addon-options": "^5.1.11",
+    "@storybook/react": "^5.1.11",
     "@svgr/rollup": "^2.4.1",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.5",
+    "babel-loader": "^8.0.6",
     "babel-plugin-external-helpers": "^6.22.0",
     "babel-plugin-import": "^1.12.1",
     "babel-preset-stage-0": "^6.24.1",
@@ -60,7 +67,14 @@
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-postcss": "^1.6.2",
-    "rollup-plugin-url": "^1.4.0"
+    "rollup-plugin-url": "^1.4.0",
+    "style-loader": "^1.0.0",
+    "wix-storybook-utils": "^3.0.10",
+    "yoshi": "^4.12.1",
+    "yoshi-config": "^4.10.2",
+    "yoshi-helpers": "^4.10.2",
+    "yoshi-runtime": "^1.0.190",
+    "yoshi-style-dependencies": "^4.6.0"
   },
   "files": [
     "dist"

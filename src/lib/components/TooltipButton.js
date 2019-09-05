@@ -3,17 +3,18 @@ import PropTypes from 'prop-types'
 import { Tooltip, Button } from 'antd'
 
 const TooltipButton = props => {
-  const { children, tip, placement, ...restProps } = props
+  const { children, tip, placement, icon,...restProps } = props
   return (
     <Tooltip title={tip} placement={placement}>
-      <Button {...restProps}>{children}</Button>
+      <Button icon={icon} {...restProps}>{children}</Button>
     </Tooltip>
   )
 }
 
 TooltipButton.propTypes = {
   tip: PropTypes.string.isRequired,
-  placement: PropTypes.string.isRequired
+  placement: PropTypes.string.isRequired,
+  icon: PropTypes.string.isRequired
 }
 
 TooltipButton.defaultProps = {

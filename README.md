@@ -1,4 +1,4 @@
-# nsc-components-v1
+# nsc-components
 
 > nsc-components
 
@@ -15,7 +15,7 @@ npm install --save nsc-components-v1
 ```jsx
 import React, { Component } from 'react'
 
-import MyComponent from 'nsc-components-v1'
+import MyComponent from 'nsc-components'
 
 class Example extends Component {
   render () {
