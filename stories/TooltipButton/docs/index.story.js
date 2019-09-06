@@ -6,7 +6,7 @@ import CodeExample from 'wix-storybook-utils/CodeExample'
 import TooltipButtonBasicExample from './ExampleBasicRaw'
 import ExampleBasicRaw from '!raw-loader!./ExampleBasicRaw'
 
-import { createAutoExampleWrapper } from '../../../stories/utils/AutoExampleWrapper'
+import { createAutoExampleWrapper } from '../../utils/AutoExampleWrapper'
 
 const exampleContainerStyle = {
   display: 'flex',
@@ -15,24 +15,6 @@ const exampleContainerStyle = {
   alignItems: 'center',
   justifyContent: 'center',
 }
-
-const exampleItems = [
-  <TooltipButton
-    icon="edit" 
-    tip="编辑"
-    onClick={() => {}}
-  />,
-  <TooltipButton
-    icon="delete" 
-    tip="删除"
-    onClick={() => {}}
-  />,
-  <TooltipButton
-    icon="rollback"
-    tip="还原"
-    onClick={() => {}}
-  />,
-]
 
 export default {
   category: storySettings.category,
@@ -56,4 +38,3 @@ export default {
     </div>
   ),
 }
-

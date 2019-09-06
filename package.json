@@ -20,7 +20,8 @@
     "prepare": "yarn run build",
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build",
-    "storybook": "start-storybook -s ./dist"
+    "storybook": "start-storybook -s ./dist",
+    "build:s": "build-storybook -o ./lib"
   },
   "peerDependencies": {
     "prop-types": "^15.5.4",
