@@ -8,7 +8,7 @@ import ExampleBasicRaw from '!raw-loader!./ExampleBasicRaw'
 
 import { createAutoExampleWrapper } from '../../utils/AutoExampleWrapper'
 
-const exampleContainerStyle = {
+const   exampleContainerStyle = {
   display: 'flex',
   backgroundColor: '#f6f8fa',
   minHeight: '50px',
