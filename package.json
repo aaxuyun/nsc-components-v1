@@ -20,7 +20,8 @@
     "prepare": "yarn run build",
     "predeploy": "cd example && yarn install && yarn run build",
     "deploy": "gh-pages -d example/build",
-    "storybook": "start-storybook -s ./dist",
+    "storybook": "npm run generate-autodocs-registry && start-storybook",
+    "generate-autodocs-registry": "node stories/generate-autodocs-registry",
     "build:s": "build-storybook -o ./lib"
   },
   "peerDependencies": {
@@ -41,6 +42,7 @@
     "@storybook/addon-options": "^5.1.11",
     "@storybook/react": "^5.1.11",
     "@svgr/rollup": "^2.4.1",
+    "@ui-autotools/registry": "^4.1.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.5",
     "babel-loader": "^8.0.6",
@@ -60,6 +62,7 @@
     "gh-pages": "^1.2.0",
     "less": "^3.10.3",
     "react": "^16.4.1",
+    "react-autodocs-utils": "^3.5.5",
     "react-dom": "^16.4.1",
     "react-scripts": "^1.1.4",
     "rollup": "^0.64.1",
