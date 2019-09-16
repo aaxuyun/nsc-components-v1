@@ -1,11 +1,12 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-
-import Markdown from 'wix-storybook-utils/Markdown'
+import { withReadme } from 'storybook-readme'
+import { withKnobs } from '@storybook/addon-knobs'
 
 import Readme from '../../README.md'
 
 storiesOf('Introduction', module)
-  .add('Getting started', () => <Markdown source={Readme} />)
+  .addDecorator(withKnobs)
+  .add('Getting started',withReadme(Readme))
 
 //TODO - add contribution docs links here somehow

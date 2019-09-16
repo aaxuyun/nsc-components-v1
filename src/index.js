@@ -19,7 +19,7 @@ import BaseModal from './components/modal/BaseModal'
 import Page from './components/page/Page'
 import PageToolbar from './components/page/PageToolbar'
 import Permission from './components/permission/Permission'
-export {ColorPicker,DragM,Drawer,Dropdown,DynamicMountComponent,InlineEditComponent,IFrame,Menu,PageLoading,TextEllipsis,Toolbar,TooltipButton,Table,confirm,LoginForm,CodeVerifyForm,BaseModal,Page,PageToolbar,Permission }
+export { ColorPicker,DragM,Drawer,Dropdown,DynamicMountComponent,InlineEditComponent,IFrame,Menu,PageLoading,TextEllipsis,Toolbar,TooltipButton,Table,confirm,LoginForm,CodeVerifyForm,BaseModal,Page,PageToolbar,Permission }
 export default {
     ColorPicker,
     DragM,

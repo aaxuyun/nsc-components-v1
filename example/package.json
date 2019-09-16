@@ -5,16 +5,24 @@
   "license": "MIT",
   "private": true,
   "dependencies": {
+    "nsc-components-v1": "link:..",
     "prop-types": "^15.6.2",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
-    "react-scripts": "^1.1.4",
-    "nsc-components-v1": "link:.."
+    "react-scripts": "^1.1.4"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "wix-storybook-utils": "^3.0.12",
+    "yoshi": "^4.15.2",
+    "yoshi-config": "^4.15.0",
+    "yoshi-helpers": "^4.15.0",
+    "yoshi-runtime": "^1.0.268",
+    "yoshi-style-dependencies": "^4.11.1"
   }
 }
