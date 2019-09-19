@@ -1,13 +1,24 @@
 import React from 'react';
-import { text, object } from '@storybook/addon-knobs';
-import TooltipButton from '../../src/lib/components/TooltipButton'
-import readme from './README.md';
+import CodeExample from 'wix-storybook-utils/CodeExample'
+import TooltipButtonBasicExample from './ExampleBasic'
+import ExampleBasicRaw from  '!raw-loader!./ExampleBasic'
+import readme from './README.md'
+
+const exampleContainerStyle = {
+    display: 'flex',
+    backgroundColor: '#f6f8fa',
+    minHeight: '50px',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }
 
 const component = () => (
-    <TooltipButton
-        tip={text('tip', 'I am a tooltip!')}
-        icon={text('icon', 'edit')}>   
-    </TooltipButton>
-);
+    <CodeExample title="Standard with icons" code={ExampleBasicRaw}>
+        <div style={exampleContainerStyle}>
+            <TooltipButtonBasicExample/>
+        </div>
+    </CodeExample>
 
-export default [readme, component];
+)
+
+export default [readme, component]

@@ -1,23 +1,12 @@
 import React from 'react';
 import { configure,addDecorator } from "@storybook/react"
 import { setOptions } from "@storybook/addon-options"
-import { withInfo } from '@storybook/addon-info'
+const req = require.context('../stories', true, /.js$/)
 
 function loadStories() {
-  require("../stories");
+  req.keys().forEach((filename) => req(filename))
 }
-const storyWrapper = story => <div style={{ margin: 35 }}>{story()}</div>;
 
-addDecorator(
-    withInfo({
-        inline: true,
-        header: false,
-        source: true,
-        maxPropsIntoLine: 1
-    })
-);
-
-addDecorator(storyWrapper);
 
 configure(loadStories, module)
 

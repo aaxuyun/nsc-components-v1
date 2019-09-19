@@ -5,8 +5,7 @@ import { withKnobs } from '@storybook/addon-knobs'
 
 import Readme from '../../README.md'
 
-storiesOf('Introduction', module)
-  .addDecorator(withKnobs)
-  .add('Getting started',withReadme(Readme))
+import Markdown from 'wix-storybook-utils/Markdown'
 
-//TODO - add contribution docs links here somehow
+storiesOf('Introduction', module)
+  .add('Getting started', () => <Markdown source={Readme} />)
