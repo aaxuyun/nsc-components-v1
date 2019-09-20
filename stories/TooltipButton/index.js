@@ -18,7 +18,6 @@ const component = () => (
             <TooltipButtonBasicExample/>
         </div>
     </CodeExample>
-
 )
 
 export default [readme, component]

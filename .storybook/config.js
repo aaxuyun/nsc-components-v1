@@ -1,5 +1,5 @@
-import React from 'react';
-import { configure,addDecorator } from "@storybook/react"
+import React from 'react'
+import { configure } from "@storybook/react"
 import { setOptions } from "@storybook/addon-options"
 const req = require.context('../stories', true, /.js$/)
 

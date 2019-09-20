@@ -2,51 +2,22 @@ const path = require('path');
 const wixStorybookConfig = require("./webpack.config.storybook")
 
 module.exports = async ({ config, mode }) => {
-  config.module.rules.push ({
+  
+  const newConfig = wixStorybookConfig(config)
+  newConfig.module.rules[0] = {
     test: /\.js[x]?$/,
-    include: [path.resolve(__dirname, '../stories')],
+    include: [path.resolve(__dirname, '..','stories'),path.resolve(__dirname, "..","src")],
     loader: "babel-loader",
-  })
-  //const newConfig = wixStorybookConfig(config)
-  config.resolve= {
-      alias: {
+  }
+  newConfig.resolve = {
+       alias: {
         "nsc-components": path.resolve(__dirname, "..", "dist")
       }
-    }
-    config.module.rules.push ({
-      test: /\.(css|scss|sass)$/,
-      exclude:[path.resolve('../node_modules/antds')],
-      rules: [
-        {
-          loader: 'style-loader',
-          options: {
-            // Reuses a single `<style></style>` element
-            singleton: true,
-          },
-        },
-        {
-          loader: 'postcss-loader',
-          options: {
-            // https://github.com/facebookincubator/create-react-app/issues/2677
-            ident: 'postcss',
-            includePaths: ['node_modules'],
-            sourceMap: false,
-          },
-        },
-        {
-          test: /\.(scss|sass)$/,
-          loader: 'sass-loader',
-          options: {
-            sourceMap: false,
-            implementation: require('node-sass'),
-            includePaths: ['node_modules'],
-          },
-        },
-      ]
-    })
+  }
+   
   
   // Return the altered config
-  return config
+  return newConfig
 }
 // const path = require('path');
 // const webpack = require('webpack');

@@ -14,33 +14,38 @@ const styleLoaders = getStyleLoaders({
   isHmr: false,
   tpaStyle: false,
 })
-styleLoaders[0].test= /\.(scss|sass)$/
-delete styleLoaders[0].exclude 
-styleLoaders[0].exclude=[path.resolve(__dirname,'../node_modules/antd')]
+styleLoaders[0].exclude=path.resolve(__dirname,'..','node_modules/antd')
 const rules=[
   {
-    test: /\.less$/,
-    include:[path.resolve(__dirname,'../node_modules/antd')],
+    test: /\.css$/,
+    include: path.resolve(__dirname, "..","node_modules/antd"),
     use: [
-      'style-loader',
-      { loader: 'css-loader', options: { importLoaders: 1 } },
-      'less-loader',
-      { loader: 'less-loader', options: { javascriptEnabled: true } }
+      'yoshi-style-dependencies/style-loader','yoshi-style-dependencies/css-loader']
+  },
+  {
+    test: /\.less$/,
+    use: [
+      'yoshi-style-dependencies/style-loader',
+      { loader: 'yoshi-style-dependencies/css-loader',options: {
+        modules: true,
+        sourceMap: false
+      } },
+      { loader: 'yoshi-style-dependencies/less-loader', options: { javascriptEnabled: true } }
     ]
-  }]
+  },
+  
+]
 module.exports = config => {
   const webpackCommonConfig = createCommonWebpackConfig({ isDebug: true });
   config.resolve.extensions = union(
     config.resolve.extensions,
     webpackCommonConfig.resolve.extensions,
   )
-  //webpackCommonConfig.module.rules[1].include=[path.resolve(__dirname,'../stories'),path.resolve(__dirname,'../node_modules/wix-storybook-utils')]
   config.module.rules = [
     ...webpackCommonConfig.module.rules,
-    ...styleLoaders,
     ...rules,
+    ...styleLoaders
   ]
-  console.log([...config.module.rules])
   config.plugins = [...(config.plugins || [])]
   config.node = { ...webpackCommonConfig.node, ...config.node }
   return config
