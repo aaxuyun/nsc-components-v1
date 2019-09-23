@@ -13,11 +13,13 @@ const exampleContainerStyle = {
   }
 
 const component = () => (
-    <CodeExample title="Standard with icons" code={ExampleBasicRaw}>
-        <div style={exampleContainerStyle}>
+    <div style={exampleContainerStyle}>
             <TooltipButtonBasicExample/>
-        </div>
-    </CodeExample>
+            <CodeExample title="Standard with icons" code={ExampleBasicRaw}>
+                
+            </CodeExample>
+     </div>
+    
 )
 
 export default [readme, component]

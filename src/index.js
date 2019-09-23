@@ -17,9 +17,11 @@ import LoginForm from './components/login/LoginForm'
 import CodeVerifyForm from './components/login/CodeVerifyForm'
 import BaseModal from './components/modal/BaseModal'
 import Page from './components/page/Page'
+import Content from './components/page/Content'
+import ContentPane from './components/page/ContentPane'
 import PageToolbar from './components/page/PageToolbar'
 import Permission from './components/permission/Permission'
-export { ColorPicker,DragM,Drawer,Dropdown,DynamicMountComponent,InlineEditComponent,IFrame,Menu,PageLoading,TextEllipsis,Toolbar,TooltipButton,Table,confirm,LoginForm,CodeVerifyForm,BaseModal,Page,PageToolbar,Permission }
+export { ColorPicker,DragM,Drawer,Dropdown,DynamicMountComponent,InlineEditComponent,IFrame,Menu,PageLoading,Content,ContentPane,TextEllipsis,Toolbar,TooltipButton,Table,confirm,LoginForm,CodeVerifyForm,BaseModal,Page,PageToolbar,Permission }
 export default {
     ColorPicker,
     DragM,
@@ -39,6 +41,8 @@ export default {
     CodeVerifyForm,
     BaseModal,
     Page,
+    Content,
+    ContentPane,
     PageToolbar,
     Permission 
 }

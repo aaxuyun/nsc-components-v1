@@ -11,7 +11,7 @@ module.exports = async ({ config, mode }) => {
   }
   newConfig.resolve = {
        alias: {
-        "nsc-components": path.resolve(__dirname, "..", "dist")
+        "nsc-components": path.resolve(__dirname, "..","src")
       }
   }
    

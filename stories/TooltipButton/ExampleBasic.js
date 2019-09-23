@@ -1,6 +1,6 @@
 import React from 'react'
 
-import  { TooltipButton }  from '../../src'
+import  { TooltipButton }  from 'nsc-components'
 import  { Tooltip,Button }  from 'antd'
 
 export default class TooltipButtonBasicExample extends React.Component {

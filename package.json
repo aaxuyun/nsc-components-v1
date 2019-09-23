@@ -5,8 +5,7 @@
   "author": "aaxuyun",
   "license": "MIT",
   "repository": "aaxuyun/nsc-components-v1",
-  "main": "dist/index.js",
-  "module": "dist/index.es.js",
+  "main": "es/index.js",
   "jsnext:main": "dist/index.es.js",
   "engines": {
     "node": ">=8",
@@ -14,6 +13,7 @@
   },
   "scripts": {
     "test": "cross-env CI=1 react-scripts test --env=jsdom",
+    "test:webpack": "webpack --config webpack.config.js",
     "test:watch": "react-scripts test --env=jsdom",
     "build": "rollup -c",
     "start": "rollup -c -w",
