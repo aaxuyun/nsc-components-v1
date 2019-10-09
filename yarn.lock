@@ -15981,6 +15981,11 @@ react-element-to-jsx-string@^14.0.2:
     "@base2/pretty-print-object" "^1.0.0"
     is-plain-object "3.0.0"
 
+react-emotion@^10.0.0:
+  version "10.0.0"
+  resolved "https://registry.yarnpkg.com/react-emotion/-/react-emotion-10.0.0.tgz#03adf5a93f9dc41396401551566adf9668a2418e"
+  integrity sha512-HMEH1I0m4AxJzG31ii/g227WhR0RBlRdr2M4C0n7yg9s3SiAPGB7lxvc/EoE8ixU9PLeOlBOb/n0wo42tGu99Q==
+
 react-error-overlay@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-4.0.1.tgz#417addb0814a90f3a7082eacba7cee588d00da89"
