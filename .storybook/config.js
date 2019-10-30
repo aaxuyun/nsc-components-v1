@@ -13,9 +13,9 @@ addParameters({
     options: {
         isFullScreen: false,
         showNav: true,
-        showPanel: true,
+        showPanel: false,
         panelPosition: 'right',
-        sortStoriesByKind: true,
+        sortStoriesByKind: false,
         hierarchySeparator: /\/|\./,
         hierarchyRootSeparator: /\|/,
         sidebarAnimations: false,

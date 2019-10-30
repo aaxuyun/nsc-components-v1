@@ -5,8 +5,6 @@ import { withInfo } from '@storybook/addon-info'
 
 import TooltipButton from './TooltipButton'
 
-const stories = storiesOf('Atoms', module)
+import './TooltipButton/index.story'
 
-stories
-    .addDecorator(withKnobs)
-    .add('TooltipButton', withReadme(...TooltipButton))
+
